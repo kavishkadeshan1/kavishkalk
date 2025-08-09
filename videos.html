@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kavishka LK – Videos</title>
+
+  <meta name="description"
+        content="All Kavishka LK videos – educational tutorials, news, vlogs and live streams. Watch them in a clean, responsive grid with hover‑zoom and lightbox.">
+  <meta name="keywords"
+        content="Kavishka LK, videos, educational, news, vlogs, live streams, YouTube">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+  <!-- AOS (scroll animations) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        rel="stylesheet">
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        rel="stylesheet">
+  <!-- Your custom CSS (same file you already use) -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.ico">
+
+  <style>
+    /* -------------------------------------------------
+       Hover‑zoom for the iframe container
+       ------------------------------------------------- */
+    .video-card {
+      overflow: hidden;               /* keep the rounded corners */
+      border-radius: .5rem;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.2);
+    }
+    .video-card .ratio {
+      transition: transform .3s ease;
+    }
+    .video-card:hover .ratio {
+      transform: scale(1.07);         /* slight zoom on hover */
+    }
+
+    /* -------------------------------------------------
+       Modal iframe – make it fill the modal nicely
+       ------------------------------------------------- */
+    .modal-body {
+      padding: 0;
+    }
+    .modal-body .ratio {
+      border-radius: 0;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
+    <div class="container-fluid container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <span class="text-white">Kavishka</span><span class="text-light"> LK</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navMenu">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="videos.html">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Dark‑mode toggle -->
+        <button id="themeToggle" class="btn btn-outline-light ms-3"
+                title="Toggle dark / light mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero d-flex align-items-center justify-content-center text-center text-white"
+           style="background-image:url('assets/img/hero.jpg');">
+    <div class="container" data-aos="fade-up">
+      <h1 class="display-4 fw-bold">All Videos</h1>
+      <p class="lead mb-4">Educational • News • Vlogs • Live Streams</p>
+    </div>
+  </section>
+
+  <!-- ==================== FILTER BAR ==================== -->
+  <section class="py-3 bg-light">
+    <div class="container" data-aos="fade-down">
+      <nav class="nav justify-content-center">
+        <a class="nav-link active filter-btn" href="#" data-filter="all">ALL</a>
+        <a class="nav-link filter-btn" href="#" data-filter="educational">EDUCATIONAL</a>
+        <a class="nav-link filter-btn" href="#" data-filter="news">NEWS</a>
+        <a class="nav-link filter-btn" href="#" data-filter="vlogs">VLOGS</a>
+        <a class="nav-link filter-btn" href="#" data-filter="live">Live Streams</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== VIDEO GRID ==================== -->
+  <section class="py-5">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-4" id="videoGrid">
+
+        <!-- ==================== VIDEO BLOCK TEMPLATE ==================== -->
+        <!--
+          To add a new video:
+          1️⃣ Copy the whole <div class="col …"> block below.
+          2️⃣ Change:
+               • data-category   → one of: educational, news, vlogs, live
+               • src attribute    → https://www.youtube.com/embed/VIDEO_ID
+               • <h5> title      → your video title
+          3️⃣ Paste it anywhere inside #videoGrid.
+        -->
+
+        <!-- ------------------- VIDEO 1 (Educational) ------------------- -->
+        <div class="col-sm-12 col-md-6 col-lg-4"
+             data-category="educational">
+          <div class="card video-card h-100 shadow-sm"
+               data-video-id="VIDEO_ID_1"
+               data-video-title="Educational 1 – How to Build a Simple Arduino Project">
+            <div class="ratio ratio-16x9"
+                 data-bs-toggle="modal"
+                 data-bs-target="#videoModal"
+                 style="cursor:pointer;">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_1"
+                      title="Kavishka LK – Educational 1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Educational 1 – How to Build a Simple Arduino Project</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------- VIDEO 2 (News) ------------------- -->
+        <div class="col-sm-12 col-md-6 col-lg-4"
+             data-category="news">
+          <div class="card video-card h-100 shadow-sm"
+               data-video-id="VIDEO_ID_2"
+               data-video-title="News 1 – Channel Update: 20 k Subscribers!">
+            <div class="ratio ratio-16x9"
+                 data-bs-toggle="modal"
+                 data-bs-target="#videoModal"
+                 style="cursor:pointer;">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
+                      title="Kavishka LK – News 1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">News 1 – Channel Update: 20 k Subscribers!</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------- VIDEO 3 (Vlogs) ------------------- -->
+        <div class="col-sm-12 col-md-6 col-lg-4"
+             data-category="vlogs">
+          <div class="card video-card h-100 shadow-sm"
+               data-video-id="VIDEO_ID_3"
+               data-video-title="Vlog 1 – A Day in My Maker Studio">
+            <div class="ratio ratio-16x9"
+                 data-bs-toggle="modal"
+                 data-bs-target="#videoModal"
+                 style="cursor:pointer;">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
+                      title="Kavishka LK – Vlog 1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Vlog 1 – A Day in My Maker Studio</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------- VIDEO 4 (Live Stream) ------------------- -->
+        <div class="col-sm-12 col-md-6 col-lg-4"
+             data-category="live">
+          <div class="card video-card h-100 shadow-sm"
+               data-video-id="VIDEO_ID_4"
+               data-video-title="Live Stream 1 – Q&A Session">
+            <div class="ratio ratio-16x9"
+                 data-bs-toggle="modal"
+                 data-bs-target="#videoModal"
+                 style="cursor:pointer;">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_4"
+                      title="Kavishka LK – Live Stream 1"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Live Stream 1 – Q&A Session</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------
+             Add as many blocks as you need (20 + works fine).
+             Just copy the whole <div class="col‑…"> block,
+             replace the VIDEO_ID_x, the title, and the data‑category.
+             ------------------------------------------------- -->
+
+      </div>
+
+      <!-- OPTIONAL: Simple pagination (static) -->
+      <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white" id="modalVideoTitle"></h5>
+          <button type="button" class="btn-close btn-close-white"
+                  data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- The iframe will be injected here by JS -->
+          <div class="ratio ratio-16x9" id="modalVideoContainer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="mt-auto py-4 bg-primary text-white text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Kavishka LK. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.youtube.com/channel/UCYOURCHANNELID"
+           target="_blank" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="https://facebook.com/yourpage"
+           target="_blank" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://instagram.com/yourhandle"
+           target="_blank" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://twitter.com/yourhandle"
+           target="_blank" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll‑to‑top button -->
+  <button id="scrollTopBtn"
+          class="btn btn-primary rounded-circle shadow"
+          title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <!-- ---- ACTIVE‑LINK HIGHLIGHTER (keeps the menu item highlighted) ---- -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('#navMenu .nav-link');
+      const currentPage = window.location.pathname.split('/').pop(); // e.g. "videos.html"
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- ---- FILTER LOGIC (pure JS) ---- -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const videoCards = document.querySelectorAll('#videoGrid > div');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          const filter = btn.getAttribute('data-filter'); // all | educational | news | vlogs | live
+
+          // active button style
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // show / hide videos
+          videoCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <!-- ---- LIGHTBOX LOGIC (populate modal with the clicked video) ---- -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('videoModal');
+      const modalTitle = document.getElementById('modalVideoTitle');
+      const modalContainer = document.getElementById('modalVideoContainer');
+
+      // When any .video-card is clicked, read its data‑attributes
+      document.querySelectorAll('.video-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const videoId = card.dataset.videoId;
+          const videoTitle = card.dataset.videoTitle;
+
+          // Set title
+          modalTitle.textContent = videoTitle;
+
+          // Build iframe (autoplay when modal opens)
+          modalContainer.innerHTML = `
+            <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+                    title="${videoTitle}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          `;
+        });
+      });
+
+      // When the modal is hidden, remove the iframe to stop playback
+      modal.addEventListener('hidden.bs.modal', () => {
+        modalContainer.innerHTML = '';
+      });
+    });
+  </script>
+</body>
+</html>
