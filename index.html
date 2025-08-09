@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kavishka LK – Home</title>
+
+  <meta name="description"
+        content="Kavishka LK – tutorials, experiments, vlogs and more. Watch the latest videos, read the blog and get in touch.">
+  <meta name="keywords"
+        content="Kavishka LK, YouTube, tutorials, tech, vlogs, contact">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+  <!-- AOS (scroll animations) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        rel="stylesheet">
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        rel="stylesheet">
+  <!-- Your custom CSS (same file you already have) -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.ico">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
+    <div class="container-fluid container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <span class="text-white">Kavishka</span><span class="text-light"> LK</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navMenu">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Dark‑mode toggle -->
+        <button id="themeToggle" class="btn btn-outline-light ms-3"
+                title="Toggle dark / light mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero d-flex align-items-center justify-content-center text-center text-white"
+           style="background-image:url('assets/img/hero.jpg');">
+    <div class="container" data-aos="fade-up">
+      <h1 class="display-4 fw-bold">Welcome to Kavishka LK</h1>
+      <p class="lead mb-4">Learn, create, explore – one video at a time.</p>
+      <a href="https://www.youtube.com/channel/UCYOURCHANNELID"
+         target="_blank"
+         class="btn btn-lg btn-light me-2"><i class="fab fa-youtube me-2"></i>Watch Latest</a>
+      <a href="#latest-videos" class="btn btn-lg btn-outline-light"><i class="fas fa-play me-2"></i>See My Videos</a>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT QUICK SNAP ==================== -->
+  <section class="py-5 bg-light">
+    <div class="container" data-aos="fade-right">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img src="assets/img/portrait.jpg"
+               class="img-fluid rounded shadow-sm"
+               alt="Kavishka portrait">
+        </div>
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Who is Kavishka LK?</h2>
+          <p class="lead">I’m a maker, coder, and storyteller who loves turning complex ideas into simple, hands‑on tutorials. From Arduino experiments to daily vlogs, I share what I learn so you can build, tinker, and grow with me.</p>
+          <a href="https://www.youtube.com/channel/UCYOURCHANNELID" target="_blank"
+             class="btn btn-primary me-2"><i class="fab fa-youtube me-1"></i>Subscribe on YouTube</a>
+          <a href="#contact" class="btn btn-outline-primary"><i class="fas fa-envelope me-1"></i>Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LATEST VIDEOS (MANUAL IFRAME) ==================== -->
+  <section id="latest-videos" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-5 fw-bold">Latest Videos</h2>
+
+      <div class="row g-4">
+
+        <!-- ---- VIDEO 1 ---- -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="ratio ratio-16x9 shadow-sm rounded">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <p class="mt-2 text-center fw-medium">Video Title 1 – short description (optional)</p>
+        </div>
+
+        <!-- ---- VIDEO 2 ---- -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="ratio ratio-16x9 shadow-sm rounded">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <p class="mt-2 text-center fw-medium">Video Title 2 – short description (optional)</p>
+        </div>
+
+        <!-- ---- VIDEO 3 ---- -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="ratio ratio-16x9 shadow-sm rounded">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <p class="mt-2 text-center fw-medium">Video Title 3 – short description (optional)</p>
+        </div>
+
+        <!-- ---- ADD MORE VIDEOS ----
+             Just copy one of the <div class="col‑…"> blocks above,
+             replace VIDEO_ID_x with the YouTube video ID,
+             change the title/description, and you’re done.
+        -->
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="videos.html" class="btn btn-outline-primary"><i class="fab fa-youtube me-1"></i>See All Videos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT DETAILS ==================== -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-4 fw-bold">Get in Touch</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="row text-center">
+
+            <!-- Phone -->
+            <div class="col-12 col-md-4 mb-4">
+              <i class="fas fa-phone fa-2x text-primary mb-2"></i>
+              <p class="mb-0"><strong>Phone</strong></p>
+              <p class="text-muted">+1 234 567 8901</p>
+            </div>
+
+            <!-- Email -->
+            <div class="col-12 col-md-4 mb-4">
+              <i class="fas fa-envelope fa-2x text-primary mb-2"></i>
+              <p class="mb-0"><strong>Email</strong></p>
+              <p class="text-muted"><a href="mailto:yourmail@gmail.com"
+                                        class="text-decoration-none">yourmail@gmail.com</a></p>
+            </div>
+
+            <!-- Location (optional) -->
+            <div class="col-12 col-md-4 mb-4">
+              <i class="fas fa-map-marker-alt fa-2x text-primary mb-2"></i>
+              <p class="mb-0"><strong>Location</strong></p>
+              <p class="text-muted">Your City, Country</p>
+            </div>
+          </div>
+
+          <!-- Social icons (same as on other pages) -->
+          <div class="text-center mt-4">
+            <a href="https://wa.me/1234567890" target="_blank"
+               class="d-inline-block text-decoration-none mx-2 social-icon"
+               title="WhatsApp"><i class="fab fa-whatsapp fa-2x text-success"></i></a>
+
+            <a href="https://facebook.com/yourpage" target="_blank"
+               class="d-inline-block text-decoration-none mx-2 social-icon"
+               title="Facebook"><i class="fab fa-facebook fa-2x text-primary"></i></a>
+
+            <a href="mailto:yourmail@gmail.com" target="_blank"
+               class="d-inline-block text-decoration-none mx-2 social-icon"
+               title="Email"><i class="fas fa-envelope fa-2x text-danger"></i></a>
+
+            <a href="https://instagram.com/yourhandle" target="_blank"
+               class="d-inline-block text-decoration-none mx-2 social-icon"
+               title="Instagram"><i class="fab fa-instagram fa-2x text-pink"></i></a>
+
+            <a href="https://twitter.com/yourhandle" target="_blank"
+               class="d-inline-block text-decoration-none mx-2 social-icon"
+               title="Twitter"><i class="fab fa-twitter fa-2x text-info"></i></a>
+
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+               class="d-inline-block text-decoration-none mx-2 social-icon"
+               title="LinkedIn"><i class="fab fa-linkedin fa-2x text-primary"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="mt-auto py-4 bg-primary text-white text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Kavishka LK. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.youtube.com/channel/UCYOURCHANNELID"
+           target="_blank" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="https://facebook.com/yourpage"
+           target="_blank" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://instagram.com/yourhandle"
+           target="_blank" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://twitter.com/yourhandle"
+           target="_blank" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll‑to‑top button -->
+  <button id="scrollTopBtn"
+          class="btn btn-primary rounded-circle shadow"
+          title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <!-- ---- ACTIVE‑LINK HIGHLIGHTER (keeps the menu item highlighted) ---- -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('#navMenu .nav-link');
+      const currentPage = window.location.pathname.split('/').pop(); // e.g. "index.html"
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (
+          (currentPage === '' && (linkPage === 'index.html' || linkPage === '#')) ||
+          linkPage === currentPage
+        ) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
